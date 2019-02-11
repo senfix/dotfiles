@@ -15,6 +15,15 @@ alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
 alias g="git"
 
+#docker
+alias dpsa="docker ps -a --format \"table {{.ID}}\t{{.Names}}\t{{.Status}}\""
+alias dps="docker ps --format \"table {{.ID}}\t{{.Names}}\t{{.Status}}\""
+alias dlog="docker logs"
+alias dc="docker-compose"
+alias dc-up="docker-compose up -d"
+alias dc-down="docker-compose down"
+alias dsls="docker service ls"
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
