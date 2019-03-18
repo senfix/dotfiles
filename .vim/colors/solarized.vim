@@ -224,7 +224,7 @@
 " orange    #cb4b16  9/3 brred    166 #d75f00 50  50  55 203  75  22  18  89  80
 " red       #dc322f  1/1 red      160 #d70000 50  65  45 220  50  47   1  79  86
 " magenta   #d33682  5/5 magenta  125 #af005f 50  65 -05 211  54 130 331  74  83
-" violet    #6c71c4 13/5 brmagenta 61 #5f5faf 50  15 -45 108 113 196 237  45  77
+" violet    #c5c6e5 13/5 brmagenta 61 #c5c6e5 50  15 -45 108 113 196 237  45  77
 " blue      #268bd2  4/4 blue      33 #0087ff 55 -10 -45  38 139 210 205  82  82
 " cyan      #2aa198  6/6 cyan      37 #00afaf 60 -35 -05  42 161 152 175  74  63
 " green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
@@ -284,6 +284,7 @@ if exists("syntax_on")
   syntax reset
 endif
 let colors_name = "solarized"
+let gui_running = has("gui_running")
 
 "}}}
 " GUI & CSApprox hexadecimal palettes"{{{
@@ -308,10 +309,11 @@ if (has("gui_running") && g:solarized_degrade == 0)
     let s:orange      = "#cb4b16"
     let s:red         = "#dc322f"
     let s:magenta     = "#d33682"
-    let s:violet      = "#6c71c4"
+    let s:violet      = "#c5c6e5"
     let s:blue        = "#268bd2"
     let s:cyan        = "#2aa198"
     let s:green       = "#859900"
+    let which_color   = "a"
 elseif (has("gui_running") && g:solarized_degrade == 1)
     " These colors are identical to the 256 color mode. They may be viewed
     " while in gui mode via "let g:solarized_degrade=1", though this is not
@@ -329,10 +331,11 @@ elseif (has("gui_running") && g:solarized_degrade == 1)
     let s:orange      = "#d75f00"
     let s:red         = "#af0000"
     let s:magenta     = "#af005f"
-    let s:violet      = "#5f5faf"
+    let s:violet      = "#c5c6e5"
     let s:blue        = "#0087ff"
     let s:cyan        = "#00afaf"
     let s:green       = "#5f8700"
+    let which_color   = "b"
 elseif g:solarized_termcolors != 256 && &t_Co >= 16
     let s:vmode       = "cterm"
     let s:base03      = "8"
@@ -347,10 +350,11 @@ elseif g:solarized_termcolors != 256 && &t_Co >= 16
     let s:orange      = "9"
     let s:red         = "1"
     let s:magenta     = "5"
-    let s:violet      = "13"
+    let s:violet      = "2"
     let s:blue        = "4"
     let s:cyan        = "6"
     let s:green       = "2"
+    let which_color   = "c"
 elseif g:solarized_termcolors == 256
     let s:vmode       = "cterm"
     let s:base03      = "234"
@@ -369,6 +373,7 @@ elseif g:solarized_termcolors == 256
     let s:blue        = "33"
     let s:cyan        = "37"
     let s:green       = "64"
+    let which_color   = "d"
 else
     let s:vmode       = "cterm"
     let s:bright      = "* term=bold cterm=bold"
@@ -388,6 +393,7 @@ else
     let s:blue        = "4"
     let s:cyan        = "6"
     let s:green       = "2"
+    let which_color   = "e"
 endif
 "}}}
 " Formatting options and null values for passthrough effect "{{{
