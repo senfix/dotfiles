@@ -24,6 +24,7 @@ alias dc-up="docker-compose up -d"
 alias dc-down="docker-compose down"
 alias dsls="docker service ls"
 
+#custom set
 alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
 
 # Detect which `ls` flavor is in use
@@ -37,6 +38,7 @@ fi
 
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
+alias ll="ls -lF ${colorflag}"
 
 # List all files colorized in long format, excluding . and ..
 alias la="ls -lAF ${colorflag}"
