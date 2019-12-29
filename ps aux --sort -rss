@@ -1,0 +1,4 @@
+docker stop wsc-fe-apache wsc-fe-php wsc-be-php wsc-be-apache 
+
+sudo systemctl start redis
+sudo systemctl start coinraiser

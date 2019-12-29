@@ -45,3 +45,7 @@ export GOPATH="/Users/Shared/Projects/GoLang"
 
 #custom scripts
 export PATH=$PATH:"/Users/vodafone/scripts"
+
+export http_proxy="proxycz.oskarmobil.cz:3128"
+export https_proxy="proxycz.oskarmobil.cz:3128"
+export NO_PROXY="127.0.0.1, localhost, *.local, *.test"
