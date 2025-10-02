@@ -33,5 +33,16 @@ export MANPAGER='less -X';
 # https://stackoverflow.com/a/42265848/96656
 export GPG_TTY=$(tty);
 
+#golang
+export GOROOT="/opt/homebrew/opt/go/libexec"
+export GOPATH="/Users/${USER}/Projects"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+
+export GO111MODULE="on"
+export GOPROXY="direct"
+export GOSUMDB="off"
+export GOPROXY="https://proxy.golang.org,direct"
+export GOPRIVATE='oddin.gg,github.com/oddin-gg'
+
 # Hide the “default interactive shell is now zsh” warning on macOS.
 export BASH_SILENCE_DEPRECATION_WARNING=1;

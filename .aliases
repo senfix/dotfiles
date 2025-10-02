@@ -15,6 +15,21 @@ alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
 alias g="git"
 
+#docker
+alias dpsa="docker ps -a --format \"table {{.ID}}\t{{.Names}}\t{{.Status}}\""
+alias dps="docker ps --format \"table {{.ID}}\t{{.Names}}\t{{.Status}}\""
+alias dlog="docker logs"
+alias dc="docker-compose"
+alias dc-up="docker-compose up -d"
+alias dc-down="docker-compose down"
+alias dsls="docker service ls"
+
+#custom set
+alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
+
+#AWS
+alias awsp="source _awsp"
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
@@ -26,6 +41,7 @@ fi
 
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
+alias ll="ls -lF ${colorflag}"
 
 # List all files colorized in long format, excluding . and ..
 alias la="ls -lAF ${colorflag}"
