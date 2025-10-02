@@ -33,19 +33,13 @@ export MANPAGER='less -X';
 # https://stackoverflow.com/a/42265848/96656
 export GPG_TTY=$(tty);
 
-#oracle
-export ORACLE_HOME="/Users/vodafone/oracle/instantclient_12_1"
-export DYLD_LIBRARY_PATH="/Users/vodafone/oracle/instantclient_12_1"
-export LD_LIBRARY_PATH="/Users/vodafone/oracle/instantclient_12_1"
-export TNS_ADMIN="/Users/vodafone/oracle/instantclient_12_1/network/admin"
-
 #golang
-export GOROOT="/usr/local/opt/go/libexec"
-export GOPATH="/Users/Shared/Projects/GoLang"
+export GOROOT="/opt/homebrew/opt/go/libexec"
+export GOPATH="/Users/${USER}/Projects"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
-#custom scripts
-export PATH=$PATH:"/Users/vodafone/scripts"
-
-export http_proxy="proxycz.oskarmobil.cz:3128"
-export https_proxy="proxycz.oskarmobil.cz:3128"
-export NO_PROXY="127.0.0.1, localhost, *.local, *.test"
+export GO111MODULE="on"
+export GOPROXY="direct"
+export GOSUMDB="off"
+export GOPROXY="https://proxy.golang.org,direct"
+export GOPRIVATE='oddin.gg,github.com/oddin-gg'
