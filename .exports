@@ -43,3 +43,6 @@ export GOPROXY="direct"
 export GOSUMDB="off"
 export GOPROXY="https://proxy.golang.org,direct"
 export GOPRIVATE='oddin.gg,github.com/oddin-gg'
+
+# Hide the “default interactive shell is now zsh” warning on macOS.
+export BASH_SILENCE_DEPRECATION_WARNING=1;
